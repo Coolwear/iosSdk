@@ -172,6 +172,11 @@
 
         }
             break;
+        case DATA_TYPE_COUNTER: {
+
+        }
+            break;
+
         default:
             break;
     }

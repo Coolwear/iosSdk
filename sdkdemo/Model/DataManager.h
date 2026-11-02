@@ -32,6 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *bloodPressureValueText;
 @property (nonatomic, copy) NSString *bloodOxygenValueText;
 @property (nonatomic, copy) NSString *realHrvValueText;
+@property (nonatomic, copy) NSString *counterValueText;
 
 + (instancetype)shared;
 

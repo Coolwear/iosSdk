@@ -45,4 +45,10 @@ typedef struct {
     unsigned char flags;              // CW_HRV_METRICS_FLAG_*
 } hrv_metrics_item_struct;
 
+typedef struct {
+    unsigned char  clear_flg;;
+    unsigned int counter_num;
+} counter_struct;
+
+
 #endif /* DataStruct_h */

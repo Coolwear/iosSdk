@@ -115,3 +115,7 @@ FOUNDATION_EXPORT const unsigned char BluetoothLibraryVersionString[];
 #import <BluetoothLibrary/Filter.h>
 #import <BluetoothLibrary/ImageColorConvertHelper.h>
 #import <BluetoothLibrary/YD_RequestCleanData.h>
+#import <BluetoothLibrary/CE_RequestCounterInfoCmd.h>
+#import <BluetoothLibrary/CE_SyncClearCounterCmd.h>
+
+

@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/BluetoothLibrary.h</key>
 		<data>
-		TOsm6e3LDli+qepDpRDlZC4hzH8=
+		VGOcUiCnQz5gZoBL74bIkIBNNPM=
 		</data>
 		<key>Headers/CECharacteristicManager.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Headers/CEProductK6.h</key>
 		<data>
-		exQkOnZYENdE7GeFpkscyd5dQYU=
+		BphImX+5fFF33kacHq7OxkDx5sc=
 		</data>
 		<key>Headers/CEReceiveObj.h</key>
 		<data>
@@ -99,6 +99,10 @@
 		<key>Headers/CE_RequestBloodPresureCmd.h</key>
 		<data>
 		broHK5gtXl9w9xe/GfyExIZ6Jzk=
+		</data>
+		<key>Headers/CE_RequestCounterInfoCmd.h</key>
+		<data>
+		DaLt383a9YD+zoJccraN9iybNC0=
 		</data>
 		<key>Headers/CE_RequestDevInfoCmd.h</key>
 		<data>
@@ -171,6 +175,10 @@
 		<key>Headers/CE_SyncBloodPressureCmd.h</key>
 		<data>
 		mfaW5mcUO5hzKk1OUQ/c9Rh7Ioo=
+		</data>
+		<key>Headers/CE_SyncClearCounterCmd.h</key>
+		<data>
+		T1Ljouj2mOv/WFU1hiLM8TCi4g8=
 		</data>
 		<key>Headers/CE_SyncContactCmd.h</key>
 		<data>
@@ -322,7 +330,7 @@
 		</data>
 		<key>Headers/DataStruct.h</key>
 		<data>
-		i4Jjzvpnz6szS4iuddbfmHTDdeo=
+		NQUqvVOIUNmTOqXrlqGAZnq7a7g=
 		</data>
 		<key>Headers/Filter.h</key>
 		<data>
@@ -330,7 +338,7 @@
 		</data>
 		<key>Headers/FuncType.h</key>
 		<data>
-		GMe2rrm3/SHYAa8WCKyGgbnz5Qo=
+		yQvaR0M4qvyen26h55MRvCOnbMY=
 		</data>
 		<key>Headers/ImageColorConvertHelper.h</key>
 		<data>
@@ -410,7 +418,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CLuOV0/38wiSkUchkdJ/H5VboK59uxUwr2ufTfREAv4=
+			GqnHUVcFkFF8usb0tD6p47EW52VJ8+QhS/UyadriMnk=
 			</data>
 		</dict>
 		<key>Headers/CECharacteristicManager.h</key>
@@ -445,7 +453,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UTmesvSji+rcgjD9mWhkDT/VxMNNJdZp+Wv2mQSJ+ao=
+			HYtsOOeIplIe2NIh3jk7SoAtoM/Ztdsj54Yrmmo5Vac=
 			</data>
 		</dict>
 		<key>Headers/CEReceiveObj.h</key>
@@ -565,6 +573,13 @@
 			<key>hash2</key>
 			<data>
 			TUp2IhlYRqygwglf8srNjTesJQxq+Lse66+0fiMqlXA=
+			</data>
+		</dict>
+		<key>Headers/CE_RequestCounterInfoCmd.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9vRARL/Nnz/cSfLWjcvAdWRcwT2XZOscCtp4vt5aEzg=
 			</data>
 		</dict>
 		<key>Headers/CE_RequestDevInfoCmd.h</key>
@@ -691,6 +706,13 @@
 			<key>hash2</key>
 			<data>
 			2PuSYhK7FDrbN6i9SvQZ2gDe+jAqCYB0UMO3sHnQvH8=
+			</data>
+		</dict>
+		<key>Headers/CE_SyncClearCounterCmd.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			oONzL84VHP8ojtKmjN0GicUZARxn3S3bt0M3gZ+aiz0=
 			</data>
 		</dict>
 		<key>Headers/CE_SyncContactCmd.h</key>
@@ -956,7 +978,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wNad2Z93hQeUWbuxkr1CQlHXN9yCOnKwZJaDtZl28AA=
+			iBEIIiLXl0TLb/QwReCkpzn47HGWgV/j43vgiQV5V88=
 			</data>
 		</dict>
 		<key>Headers/Filter.h</key>
@@ -970,7 +992,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			balROBpFr9ABpX0o+DDQ+rGXdIMdrjveebb/4xIkK84=
+			cgE7qdXKoXLfl62fiUibNAfjxsEyA0gp/ONDHqp3dKo=
 			</data>
 		</dict>
 		<key>Headers/ImageColorConvertHelper.h</key>

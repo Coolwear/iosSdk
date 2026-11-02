@@ -108,7 +108,8 @@ typedef NS_ENUM(NSInteger, K6_DataFuncType) {
     DATA_TYPE_LOCATION_INFO = 152,  // 当前地理位置
 
     DATA_TYPE_SET_LEFT_RIGHT_HAND = 157,  // 设置左右手佩戴
-    
+    DATA_TYPE_COUNTER = 163,//计数器
+
     APP_TO_DEV_END_TYPE = 200,
 
     /* 3.No use (201-255) */

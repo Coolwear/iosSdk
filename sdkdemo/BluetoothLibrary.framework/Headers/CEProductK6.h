@@ -64,6 +64,9 @@
 #import <BluetoothLibrary/CE_SyncECGCmd.h>
 #import <BluetoothLibrary/CE_SyncBloodPressureCmd.h>
 #import <BluetoothLibrary/CE_SyncRRIHRVCmd.h>
+#import <BluetoothLibrary/CE_RequestCounterInfoCmd.h>
+#import <BluetoothLibrary/CE_SyncClearCounterCmd.h>
+
 
 #import <BluetoothLibrary/YD_SyncFaceIndexCmd.h>
 #import <BluetoothLibrary/CE_SyncSystemFaceDataCmd.h>

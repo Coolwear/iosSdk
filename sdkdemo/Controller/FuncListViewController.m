@@ -95,8 +95,10 @@
     FuncModel *realo2 = [[FuncModel alloc] initWithTitle:@"Real-time Blood Pressure" type:2];
     FuncModel *realbp = [[FuncModel alloc] initWithTitle:@"Real-time Blood Oxygen" type:2];
     FuncModel *realHrv= [[FuncModel alloc] initWithTitle:@"Real-time HRV" type:2];
+    FuncModel *counter = [[FuncModel alloc] initWithTitle:@"Counter" type:2];
+    FuncModel *clearCounter = [[FuncModel alloc] initWithTitle:@"Clear Counter" type:2];
 
-    self.data = @[dial, app, alarm, sms, call, longsit, goal, water, time, date, find, disturb, raise, autoHr, takePhoto,realHeartPPG,realGensor, ota, weather, contact, realhr, realo2, realbp,realHrv];
+    self.data = @[dial, app, alarm, sms, call, longsit, goal, water, time, date, find, disturb, raise, autoHr, takePhoto, realHeartPPG, realGensor, ota, weather, contact, realhr, realo2, realbp, realHrv, counter, clearCounter];
     
 }
 
@@ -269,6 +271,8 @@
         cell.detailTextLabel.text = DataManager.shared.bloodPressureValueText;
     } else if (indexPath.row == 22) {
         cell.detailTextLabel.text = DataManager.shared.bloodOxygenValueText;
+    } else if (indexPath.row == 24) {
+        cell.detailTextLabel.text = DataManager.shared.counterValueText;
     }
     return cell;
 }
@@ -335,6 +339,32 @@
         [CEProductK6.shareInstance sendCmdToDevice:cmd complete:nil];
         
         
+    }
+
+    if (24 == indexPath.row) {
+        CE_RequestCounterInfoCmd *cmd = [[CE_RequestCounterInfoCmd alloc] init];
+        [CEProductK6.shareInstance sendCmdToDevice:cmd complete:^(NSError *error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (error) {
+                    [self appendLog:error.localizedDescription ?: @"Failed to read counter" direction:@"ERR"];
+                } else {
+                    [self appendLog:@"Counter request sent" direction:@"DONE"];
+                }
+            });
+        }];
+    }
+
+    if (25 == indexPath.row) {
+        CE_SyncClearCounterCmd *cmd = [[CE_SyncClearCounterCmd alloc] initWithOnoff:1];
+        [CEProductK6.shareInstance sendCmdToDevice:cmd complete:^(NSError *error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (error) {
+                    [self appendLog:error.localizedDescription ?: @"Failed to clear counter" direction:@"ERR"];
+                } else {
+                    [self appendLog:@"Clear command acknowledged; waiting for DATA_TYPE_COUNTER report" direction:@"DONE"];
+                }
+            });
+        }];
     }
     
 

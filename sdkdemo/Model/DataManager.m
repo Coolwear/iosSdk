@@ -23,6 +23,7 @@
         self.heartRateValueText = @"--";
         self.bloodPressureValueText = @"--";
         self.bloodOxygenValueText = @"--";
+        self.counterValueText = @"--";
     }
     return self;
 }
@@ -94,6 +95,14 @@
     
     if (model.DataType == DATA_TYPE_REAL_HRV_METRICS || model.DataType == DATA_TYPE_HISTORY_HRV_METRICS){
     /// real hrv data
+    }
+    
+    if (model.DataType == DATA_TYPE_COUNTER){
+        NSDictionary *counterData = [model.Data isKindOfClass:NSDictionary.class] ? model.Data : nil;
+        id counterNumber = counterData[@"counterNum"];
+        if ([counterNumber respondsToSelector:@selector(stringValue)]) {
+            self.counterValueText = [counterNumber stringValue];
+        }
     }
     
     

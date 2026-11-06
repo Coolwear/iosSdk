@@ -98,7 +98,7 @@ class FileListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let width = view.bounds.size.width
         
-        titleLabel.text = "Download"
+        titleLabel.text = NSLocalizedString("Download", comment: "")
         titleLabel.textColor = .white
         titleLabel.frame = bar.bounds
         titleLabel.textAlignment = .center
@@ -107,12 +107,13 @@ class FileListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         backBtn.frame = CGRect(x: 10, y: 7, width: 24, height: 30)
         backBtn.setImage(UIImage(named: "返回"), for: .normal)
+        backBtn.accessibilityLabel = NSLocalizedString("Back", comment: "")
         backBtn.addTarget(self, action: #selector(back), for: .touchUpInside)
         bar.addSubview(backBtn)
                 
         let sLab = UILabel()
         sLab.frame = CGRect(x: 15, y: 0, width: 100, height: serverView.frame.size.height)
-        sLab.text = "Server"
+        sLab.text = NSLocalizedString("Server", comment: "")
         serverView.addSubview(sLab)
         
         let leftW = sLab.frame.size.width + 15
@@ -124,7 +125,7 @@ class FileListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let idLeft = UILabel()
         idLeft.frame = CGRect(x: 15, y: 0, width: leftW, height: serverView.frame.size.height)
-        idLeft.text = "Entry ID:"
+        idLeft.text = NSLocalizedString("Entry ID:", comment: "")
         idView.addSubview(idLeft)
         
         idTextFild.frame = CGRect(x: leftW, y: 0, width: width-leftW - 16, height: idView.frame.size.height)
@@ -136,13 +137,13 @@ class FileListViewController: UIViewController, UITableViewDataSource, UITableVi
         findBtn.frame = CGRect(x: 15, y: 8, width: width-30, height: 49)
         findBtn.backgroundColor = .systemBlue
         findBtn.layer.cornerRadius = 8
-        findBtn.setTitle("Find", for: .normal)
+        findBtn.setTitle(NSLocalizedString("Find", comment: ""), for: .normal)
         findView.addSubview(findBtn)
         
     }
     
     private func getService() -> String {
-        return local == 1 ? "Cloud" : "Local"
+        return local == 1 ? NSLocalizedString("Cloud", comment: "") : NSLocalizedString("Local", comment: "")
     }
     
     private func ip() -> String {
@@ -207,9 +208,9 @@ class FileListViewController: UIViewController, UITableViewDataSource, UITableVi
             guard resp.error == nil else{
 
                 if resp.error!._code == NSURLErrorTimedOut {
-                    ProgressHUD.show("Request Time Out", interaction: false)
+                    ProgressHUD.show(NSLocalizedString("Request Time Out", comment: ""), interaction: false)
                 }else if resp.error!.isInvalidURLError {
-                    ProgressHUD.show("Invalid URL", interaction: false)
+                    ProgressHUD.show(NSLocalizedString("Invalid URL", comment: ""), interaction: false)
                 }else{
                     ProgressHUD.show(icon: .failed)
                 }
@@ -294,7 +295,7 @@ class FileListViewController: UIViewController, UITableViewDataSource, UITableVi
         versionLab.textColor = .white
         contentView.addSubview(versionLab)
         let versionModel = versionData[section]
-        versionLab.text = "Version: " + versionModel.version
+        versionLab.text = String(format: NSLocalizedString("Version: %@", comment: ""), versionModel.version)
         
         let urlLab = UILabel()
         urlLab.frame = CGRect(x: 8, y: 27, width: contentView.frame.size.width, height: 21)
@@ -321,9 +322,9 @@ class FileListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @objc func downloadAlertWindow(tap: UITapGestureRecognizer) {
 
-        let alert = UIAlertController(title: "Download", message: "Confirm the download", preferredStyle: .alert)
-        let act1 = UIAlertAction(title: "Cancel", style: .default)
-        let act2 = UIAlertAction(title: "Download", style: .default) { act in
+        let alert = UIAlertController(title: NSLocalizedString("Download", comment: ""), message: NSLocalizedString("Confirm the download", comment: ""), preferredStyle: .alert)
+        let act1 = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .default)
+        let act2 = UIAlertAction(title: NSLocalizedString("Download", comment: ""), style: .default) { act in
             let contentView = tap.view?.superview
             let cell: UITableViewCell = contentView?.superview as! UITableViewCell
             let idxPath = self.tableView.indexPath(for: cell)
@@ -338,7 +339,7 @@ class FileListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     private func download(url: String, fileName: String) {
 
-        ProgressHUD.show("downloading", interaction: false)
+        ProgressHUD.show(NSLocalizedString("downloading", comment: ""), interaction: false)
         DispatchQueue.global().async {
             
             let destination: DownloadRequest.Destination = { _, _ in
@@ -355,9 +356,9 @@ class FileListViewController: UIViewController, UITableViewDataSource, UITableVi
                 guard resp.error == nil else{
 
                     if resp.error!._code == NSURLErrorTimedOut {
-                        ProgressHUD.show("Request Time Out", interaction: false)
+                        ProgressHUD.show(NSLocalizedString("Request Time Out", comment: ""), interaction: false)
                     }else if resp.error!.isInvalidURLError {
-                        ProgressHUD.show("Invalid URL", interaction: false)
+                        ProgressHUD.show(NSLocalizedString("Invalid URL", comment: ""), interaction: false)
                     }else{
                         ProgressHUD.show(icon: .failed)
                     }

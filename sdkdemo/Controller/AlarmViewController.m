@@ -16,11 +16,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = @"Alarm Reminder";
+    self.title = NSLocalizedString(@"Alarm Reminder", nil);
     
     UIButton *addBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 55)];
     addBtn.backgroundColor = UIColor.blueColor;
-    [addBtn setTitle:@"Add Alarm" forState:UIControlStateNormal];
+    [addBtn setTitle:NSLocalizedString(@"Add Alarm", nil) forState:UIControlStateNormal];
     [addBtn addTarget:self action:@selector(addAlarm) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:addBtn];
     
@@ -37,7 +37,7 @@
     item.hour = [self dateComponets].hour;
     item.min = [self dateComponets].minute+1;
     item.repeatDay = 0;
-    item.name = @"Alarm in One Minute";
+    item.name = NSLocalizedString(@"Alarm in One Minute", nil);
     item.isRepeatWeek = NO;
     [alarmArray addObject:item];
     

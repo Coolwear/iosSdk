@@ -35,7 +35,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
-    NSArray *arr = @[@"Dial_01",@"Dial_02",@"Dial_03",@"CustomDial"];
+    NSArray *arr = @[NSLocalizedString(@"Dial_01", nil),NSLocalizedString(@"Dial_02", nil),NSLocalizedString(@"Dial_03", nil),NSLocalizedString(@"CustomDial", nil)];
     cell.textLabel.text = arr[indexPath.row];
     return cell;
 }

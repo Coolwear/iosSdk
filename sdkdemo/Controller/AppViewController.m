@@ -22,11 +22,11 @@
     self.data = DataManager.shared.appswt;
     
     self.titles = @[
-        @"QQ", @"Wechat",@"Email", @"Facebook",@"Twitter", @"WhatsApp",
+        @"QQ", NSLocalizedString(@"Wechat", nil),NSLocalizedString(@"Email", nil), @"Facebook",@"Twitter", @"WhatsApp",
         @"Instagram", @"Skype",
         @"LinkedIn", @"Line",
         @"Kakao Talk",@"Telegram",
-        @"Other",];
+        NSLocalizedString(@"Other", nil),];
   
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     self.tableView.dataSource = self;
@@ -65,7 +65,7 @@
     UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 55)];
     v.backgroundColor = UIColor.whiteColor;
     UILabel *tl = [[UILabel alloc] initWithFrame:CGRectMake(15, 17, 150, 21)];
-    tl.text = @"App Notifications";
+    tl.text = NSLocalizedString(@"App Notifications", nil);
     [v addSubview:tl];
     
     UISwitch *swt = [[UISwitch alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 65, 12.5, 60, 30)];

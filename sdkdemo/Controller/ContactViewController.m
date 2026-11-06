@@ -19,8 +19,8 @@
     
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(syncContactEnd:) name:@"SyncContactEnd" object:nil];
     
-    UIBarButtonItem *add = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(add:)];
-    UIBarButtonItem *del = [[UIBarButtonItem alloc] initWithTitle:@"Del Last" style:UIBarButtonItemStylePlain target:self action:@selector(delLast:)];
+    UIBarButtonItem *add = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Add", nil) style:UIBarButtonItemStylePlain target:self action:@selector(add:)];
+    UIBarButtonItem *del = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Del Last", nil) style:UIBarButtonItemStylePlain target:self action:@selector(delLast:)];
     self.navigationItem.rightBarButtonItems = @[add, del];
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];

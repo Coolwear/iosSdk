@@ -53,7 +53,7 @@
     timeTopLab.frame = CGRectMake(0, 3, 200, 18);
     timeBottomLab.frame = CGRectMake(0, 39, 200, 18);
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Sure" style:UIBarButtonItemStylePlain target:self action:@selector(sureAction)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Sure", nil) style:UIBarButtonItemStylePlain target:self action:@selector(sureAction)];
 }
 
 - (void)viewWillLayoutSubviews{

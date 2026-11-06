@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D061A1100000000000000001 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D061A1100000000000000003 /* Localizable.strings */; };
+		D061A1100000000000000002 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D061A1100000000000000004 /* InfoPlist.strings */; };
 		6378243B19A2C3ABC1D5CEFB /* Pods_sdkdemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916E5BE4E3FB81E469F3DD01 /* Pods_sdkdemo.framework */; };
 		8AC4C97D2E335B3B00898040 /* BluetoothLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC4C97C2E335B3A00898040 /* BluetoothLibrary.framework */; };
 		8AC4C97E2E335B3B00898040 /* BluetoothLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC4C97C2E335B3A00898040 /* BluetoothLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -124,6 +126,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D061A1100000000000000005 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D061A1100000000000000006 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D061A1100000000000000007 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D061A1100000000000000008 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		29A9E2699A74764F400CCC45 /* Pods-sdkdemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdkdemo.release.xcconfig"; path = "Target Support Files/Pods-sdkdemo/Pods-sdkdemo.release.xcconfig"; sourceTree = "<group>"; };
 		517DF1BD42238BA5CD99FE75 /* Pods-sdkdemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdkdemo.debug.xcconfig"; path = "Target Support Files/Pods-sdkdemo/Pods-sdkdemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8AC4C97A2E335B2D00898040 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
@@ -489,6 +495,8 @@
 				9FDB555328DAAEE00021DF4C /* loading.gif */,
 				9FCAA6B328D9B39900517DA5 /* LaunchScreen.storyboard */,
 				9FCAA6B628D9B39900517DA5 /* Info.plist */,
+				D061A1100000000000000003 /* Localizable.strings */,
+				D061A1100000000000000004 /* InfoPlist.strings */,
 				9FCAA6B728D9B39900517DA5 /* main.m */,
 			);
 			path = sdkdemo;
@@ -607,6 +615,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 				Base,
 			);
 			mainGroup = 9FCAA69928D9B39700517DA5;
@@ -626,6 +635,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D061A1100000000000000001 /* Localizable.strings in Resources */,
+				D061A1100000000000000002 /* InfoPlist.strings in Resources */,
 				9FCAA6B528D9B39900517DA5 /* LaunchScreen.storyboard in Resources */,
 				9FDB555428DAAEE00021DF4C /* loading.gif in Resources */,
 				9FCAA6B228D9B39900517DA5 /* Assets.xcassets in Resources */,
@@ -806,6 +817,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D061A1100000000000000003 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D061A1100000000000000005 /* en */,
+				D061A1100000000000000006 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		D061A1100000000000000004 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D061A1100000000000000007 /* en */,
+				D061A1100000000000000008 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		9FCAA6AE28D9B39700517DA5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -953,7 +982,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/sdkdemo/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sdkdemo/Info.plist;
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "request  Bluetooth";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Bluetooth access is used to discover and connect to your wearable device.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -993,7 +1022,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/sdkdemo/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sdkdemo/Info.plist;
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "request  Bluetooth";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Bluetooth access is used to discover and connect to your wearable device.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

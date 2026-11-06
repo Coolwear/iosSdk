@@ -85,6 +85,7 @@ class BleListViewController: UIViewController, UITableViewDataSource, UITableVie
         let backBtn = UIButton()
         backBtn.frame = CGRect(x: 10, y: 7, width: 24, height: 30)
         backBtn.setImage(UIImage(named: "返回"), for: .normal)
+        backBtn.accessibilityLabel = NSLocalizedString("Back", comment: "")
         backBtn.addTarget(self, action: #selector(back), for: .touchUpInside)
         topView.addSubview(backBtn)
         
@@ -124,16 +125,16 @@ class BleListViewController: UIViewController, UITableViewDataSource, UITableVie
         let idstr = model.deviceID() ?? "null"
         cell?.textLabel?.text = name + "【\(idstr)】"
         let rssi = model.rssi?.intValue ?? 0
-        cell?.detailTextLabel?.text = rssi == 0 ? "Connected" : "\(String(describing: rssi))";
+        cell?.detailTextLabel?.text = rssi == 0 ? NSLocalizedString("Connected", comment: "") : "\(String(describing: rssi))";
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         let model: SearchPeripheral = data[indexPath.row]
-        let alrt = UIAlertController(title: "", message: "Connecting Device【\(model.name() ?? "null")】", preferredStyle: .alert)
-        let cancel = UIAlertAction(title: "Cancel", style: .default)
-        let sure = UIAlertAction(title: "Connecting", style: .default) { action in
+        let alrt = UIAlertController(title: "", message: String(format: NSLocalizedString("Connecting Device【%@】", comment: ""), model.name() ?? "null"), preferredStyle: .alert)
+        let cancel = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .default)
+        let sure = UIAlertAction(title: NSLocalizedString("Connecting", comment: ""), style: .default) { action in
             ProgressHUD.show()
             self.sp = model
             self.k6.connect(model.peripheral)

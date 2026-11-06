@@ -37,7 +37,7 @@
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(originalDataLog:) name:@"CEOriginalDataLog" object:nil];
     [self initData];
     [self initUI];
-    [self appendLog:@"Waiting for commands or device response data" direction:@"INFO"];
+    [self appendLog:NSLocalizedString(@"Waiting for commands or device response data", nil) direction:@"INFO"];
     
 }
 
@@ -70,33 +70,33 @@
 
 - (void)initData{
         
-    FuncModel *dial = [[FuncModel alloc] initWithTitle:@"Watch Face" type:0 page:@"DialViewController"];
-    FuncModel *app = [[FuncModel alloc] initWithTitle:@"App Notifications" type:0 page:@"AppViewController"];
-    FuncModel *alarm = [[FuncModel alloc] initWithTitle:@"Alarm" type:0 page:@"AlarmViewController"];
-    FuncModel *sms = [[FuncModel alloc] initWithTitle:@"SMS Reminder" type:1];
-    FuncModel *call = [[FuncModel alloc] initWithTitle:@"Call Reminder" type:1];
-    FuncModel *longsit = [[FuncModel alloc] initWithTitle:@"Sedentary Reminder" type:1];
-    FuncModel *goal = [[FuncModel alloc] initWithTitle:@"Goal Reminder" type:1];
-    FuncModel *water = [[FuncModel alloc] initWithTitle:@"Drink Water Reminder" type:1];
-    FuncModel *time = [[FuncModel alloc] initWithTitle:@"Time Format" type:1];
-    FuncModel *date = [[FuncModel alloc] initWithTitle:@"Date Format" type:1];
-    FuncModel *find = [[FuncModel alloc] initWithTitle:@"Find Band" type:2];
-    FuncModel *disturb = [[FuncModel alloc] initWithTitle:@"Do Not Disturb" type:1];
-    FuncModel *raise = [[FuncModel alloc] initWithTitle:@"Raise to Wake" type:1];
-    FuncModel *autoHr = [[FuncModel alloc] initWithTitle:@"Auto Heart Rate" type:1];
-    FuncModel *takePhoto = [[FuncModel alloc] initWithTitle:@"Remote Camera" type:1];
-    FuncModel *realHeartPPG = [[FuncModel alloc] initWithTitle:@"Heart Rate PPG" type:1];
-    FuncModel *realGensor = [[FuncModel alloc] initWithTitle:@"G-Sensor Data" type:1];
+    FuncModel *dial = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Watch Face", nil) type:0 page:@"DialViewController"];
+    FuncModel *app = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"App Notifications", nil) type:0 page:@"AppViewController"];
+    FuncModel *alarm = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Alarm", nil) type:0 page:@"AlarmViewController"];
+    FuncModel *sms = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"SMS Reminder", nil) type:1];
+    FuncModel *call = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Call Reminder", nil) type:1];
+    FuncModel *longsit = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Sedentary Reminder", nil) type:1];
+    FuncModel *goal = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Goal Reminder", nil) type:1];
+    FuncModel *water = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Drink Water Reminder", nil) type:1];
+    FuncModel *time = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Time Format", nil) type:1];
+    FuncModel *date = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Date Format", nil) type:1];
+    FuncModel *find = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Find Band", nil) type:2];
+    FuncModel *disturb = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Do Not Disturb", nil) type:1];
+    FuncModel *raise = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Raise to Wake", nil) type:1];
+    FuncModel *autoHr = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Auto Heart Rate", nil) type:1];
+    FuncModel *takePhoto = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Remote Camera", nil) type:1];
+    FuncModel *realHeartPPG = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Heart Rate PPG", nil) type:1];
+    FuncModel *realGensor = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"G-Sensor Data", nil) type:1];
 
-    FuncModel *ota = [[FuncModel alloc] initWithTitle:@"OTA" type:2];
-    FuncModel *weather = [[FuncModel alloc] initWithTitle:@"Send Weather" type:2];
-    FuncModel *contact = [[FuncModel alloc] initWithTitle:@"Contacts" type:0 page:@"ContactViewController"];
-    FuncModel *realhr = [[FuncModel alloc] initWithTitle:@"Real-time Heart Rate" type:2];
-    FuncModel *realo2 = [[FuncModel alloc] initWithTitle:@"Real-time Blood Pressure" type:2];
-    FuncModel *realbp = [[FuncModel alloc] initWithTitle:@"Real-time Blood Oxygen" type:2];
-    FuncModel *realHrv= [[FuncModel alloc] initWithTitle:@"Real-time HRV" type:2];
-    FuncModel *counter = [[FuncModel alloc] initWithTitle:@"Counter" type:2];
-    FuncModel *clearCounter = [[FuncModel alloc] initWithTitle:@"Clear Counter" type:2];
+    FuncModel *ota = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"OTA", nil) type:2];
+    FuncModel *weather = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Send Weather", nil) type:2];
+    FuncModel *contact = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Contacts", nil) type:0 page:@"ContactViewController"];
+    FuncModel *realhr = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Real-time Heart Rate", nil) type:2];
+    FuncModel *realo2 = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Real-time Blood Pressure", nil) type:2];
+    FuncModel *realbp = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Real-time Blood Oxygen", nil) type:2];
+    FuncModel *realHrv= [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Real-time HRV", nil) type:2];
+    FuncModel *counter = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Counter", nil) type:2];
+    FuncModel *clearCounter = [[FuncModel alloc] initWithTitle:NSLocalizedString(@"Clear Counter", nil) type:2];
 
     self.data = @[dial, app, alarm, sms, call, longsit, goal, water, time, date, find, disturb, raise, autoHr, takePhoto, realHeartPPG, realGensor, ota, weather, contact, realhr, realo2, realbp, realHrv, counter, clearCounter];
     
@@ -107,8 +107,8 @@
     
     self.title = self.sp.name;
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(backAction:)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Clear" style:UIBarButtonItemStylePlain target:self action:@selector(clearLogs)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Back", nil) style:UIBarButtonItemStylePlain target:self action:@selector(backAction:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Clear", nil) style:UIBarButtonItemStylePlain target:self action:@selector(clearLogs)];
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     self.tableView.dataSource = self;
@@ -131,7 +131,7 @@
     [self.view addSubview:self.resultPanel];
     
     self.connectionLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-    self.connectionLabel.text = @"Response";
+    self.connectionLabel.text = NSLocalizedString(@"Response", nil);
     self.connectionLabel.textColor = UIColor.whiteColor;
     self.connectionLabel.backgroundColor = [UIColor colorWithRed:0.12 green:0.47 blue:0.85 alpha:1.0];
     self.connectionLabel.font = [UIFont systemFontOfSize:13 weight:UIFontWeightSemibold];
@@ -141,7 +141,7 @@
     [self.resultPanel addSubview:self.connectionLabel];
     
     self.lastCommandLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-    self.lastCommandLabel.text = @"Last command: None";
+    self.lastCommandLabel.text = NSLocalizedString(@"Last command: None", nil);
     self.lastCommandLabel.textColor = [UIColor colorWithRed:0.23 green:0.27 blue:0.33 alpha:1.0];
     self.lastCommandLabel.font = [UIFont systemFontOfSize:13 weight:UIFontWeightMedium];
     [self.resultPanel addSubview:self.lastCommandLabel];
@@ -165,7 +165,7 @@
 - (void)dataReceiveFinish:(NSNotification *)noti{
     [self.tableView reloadData];
     NSString *message = [self prettyStringFromObject:noti.userInfo];
-    [self appendLog:message.length > 0 ? message : @"Received device data" direction:@"RECV"];
+    [self appendLog:message.length > 0 ? message : NSLocalizedString(@"Received device data", nil) direction:@"RECV"];
 }
 
 - (void)originalDataLog:(NSNotification *)noti {
@@ -189,7 +189,7 @@
 - (void)clearLogs {
     [self.resultLogs removeAllObjects];
     self.resultTextView.text = @"";
-    self.lastCommandLabel.text = @"Last command: None";
+    self.lastCommandLabel.text = NSLocalizedString(@"Last command: None", nil);
 }
 
 - (void)appendLog:(NSString *)message direction:(NSString *)direction {
@@ -200,7 +200,18 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"HH:mm:ss";
     NSString *time = [formatter stringFromDate:NSDate.date];
-    NSString *log = [NSString stringWithFormat:@"[%@] %@\n%@", time, direction, message];
+    NSDictionary<NSString *, NSString *> *directionTitles = @{
+        @"INFO": NSLocalizedString(@"INFO", nil),
+        @"RECV": NSLocalizedString(@"RECV", nil),
+        @"RAW": NSLocalizedString(@"RAW", nil),
+        @"SEND": NSLocalizedString(@"SEND", nil),
+        @"ERR": NSLocalizedString(@"ERR", nil),
+        @"DONE": NSLocalizedString(@"DONE", nil),
+        @"RAW SEND": NSLocalizedString(@"RAW SEND", nil),
+        @"RAW RECV": NSLocalizedString(@"RAW RECV", nil)
+    };
+    NSString *directionTitle = directionTitles[direction] ?: direction;
+    NSString *log = [NSString stringWithFormat:@"[%@] %@\n%@", time, directionTitle, message];
     [self.resultLogs addObject:log];
     if (self.resultLogs.count > 40) {
         [self.resultLogs removeObjectAtIndex:0];
@@ -212,9 +223,9 @@
 }
 
 - (void)recordCommandWithTitle:(NSString *)title {
-    NSString *command = [NSString stringWithFormat:@"Last command: %@", title ?: @"Unknown"];
+    NSString *command = [NSString stringWithFormat:NSLocalizedString(@"Last command: %@", nil), title ?: NSLocalizedString(@"Unknown", nil)];
     self.lastCommandLabel.text = command;
-    [self appendLog:title ?: @"Unknown command" direction:@"SEND"];
+    [self appendLog:title ?: NSLocalizedString(@"Unknown command", nil) direction:@"SEND"];
 }
 
 - (NSString *)prettyStringFromObject:(id)object {
@@ -307,7 +318,7 @@
         [self sendWeather];
     }
     if (20 == indexPath.row){
-        DataManager.shared.heartRateValueText = @"Measuring...";
+        DataManager.shared.heartRateValueText = NSLocalizedString(@"Measuring...", nil);
         [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
         CE_SyncHeartRateCmd *cmd = [[CE_SyncHeartRateCmd alloc] init];
         cmd.status = 1;
@@ -315,14 +326,14 @@
 
     }
     if (21 == indexPath.row) {
-        DataManager.shared.bloodPressureValueText = @"Measuring...";
+        DataManager.shared.bloodPressureValueText = NSLocalizedString(@"Measuring...", nil);
         [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
         CE_SyncBloodPressureCmd *cmd = [[CE_SyncBloodPressureCmd alloc] init];
         cmd.status = 1;
         [CEProductK6.shareInstance sendCmdToDevice:cmd complete:nil];
     }
     if (22 == indexPath.row) {
-        DataManager.shared.bloodOxygenValueText = @"Measuring...";
+        DataManager.shared.bloodOxygenValueText = NSLocalizedString(@"Measuring...", nil);
         [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
         CE_SyncHeartO2Cmd *cmd = [[CE_SyncHeartO2Cmd alloc] init];
         cmd.status = 1;
@@ -332,7 +343,7 @@
     }
     
     if (23 == indexPath.row) {
-        DataManager.shared.realHrvValueText = @"Measuring...";
+        DataManager.shared.realHrvValueText = NSLocalizedString(@"Measuring...", nil);
         [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
         CE_SyncRRIHRVCmd *cmd = [[CE_SyncRRIHRVCmd alloc] init];
         cmd.status = 1;
@@ -346,9 +357,9 @@
         [CEProductK6.shareInstance sendCmdToDevice:cmd complete:^(NSError *error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (error) {
-                    [self appendLog:error.localizedDescription ?: @"Failed to read counter" direction:@"ERR"];
+                    [self appendLog:error.localizedDescription ?: NSLocalizedString(@"Failed to read counter", nil) direction:@"ERR"];
                 } else {
-                    [self appendLog:@"Counter request sent" direction:@"DONE"];
+                    [self appendLog:NSLocalizedString(@"Counter request sent", nil) direction:@"DONE"];
                 }
             });
         }];
@@ -359,9 +370,9 @@
         [CEProductK6.shareInstance sendCmdToDevice:cmd complete:^(NSError *error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (error) {
-                    [self appendLog:error.localizedDescription ?: @"Failed to clear counter" direction:@"ERR"];
+                    [self appendLog:error.localizedDescription ?: NSLocalizedString(@"Failed to clear counter", nil) direction:@"ERR"];
                 } else {
-                    [self appendLog:@"Clear command acknowledged; waiting for DATA_TYPE_COUNTER report" direction:@"DONE"];
+                    [self appendLog:NSLocalizedString(@"Clear command acknowledged; waiting for DATA_TYPE_COUNTER report", nil) direction:@"DONE"];
                 }
             });
         }];
@@ -375,7 +386,7 @@
     
     NSInteger tag = swt.tag;
     FuncModel *model = self.data[tag];
-    [self recordCommandWithTitle:[NSString stringWithFormat:@"%@ %@", model.title, swt.on ? @"On" : @"Off"]];
+    [self recordCommandWithTitle:[NSString stringWithFormat:@"%@ %@", model.title, swt.on ? NSLocalizedString(@"On", nil) : NSLocalizedString(@"Off", nil)]];
     if (3 == tag){
         YD_SyncSMSAlarmCmd *tSMSAlarmCmd = [[YD_SyncSMSAlarmCmd alloc] init];
         tSMSAlarmCmd.onoff = swt.on;
@@ -497,9 +508,9 @@
     
     [[CEProductK6 shareInstance] sendCmdToDevice:weatherCmd complete:^(NSError *error) {
         if (error == nil){
-            [self appendLog:@"Weather sent successfully" direction:@"DONE"];
+            [self appendLog:NSLocalizedString(@"Weather sent successfully", nil) direction:@"DONE"];
         } else {
-            [self appendLog:error.localizedDescription ?: @"Failed to send weather" direction:@"ERR"];
+            [self appendLog:error.localizedDescription ?: NSLocalizedString(@"Failed to send weather", nil) direction:@"ERR"];
         }
     }];
 }
@@ -524,11 +535,11 @@
     }
     if (8 == indexPath.row) {
         cell.swt.on = shared.date.format;
-        cell.detailTextLabel.text = shared.date.format == 0 ? @"12-hour" : @"24-hour";
+        cell.detailTextLabel.text = shared.date.format == 0 ? NSLocalizedString(@"12-hour", nil) : NSLocalizedString(@"24-hour", nil);
     }
     if (9 == indexPath.row) {
         cell.swt.on = shared.date.mdFormat;
-        cell.detailTextLabel.text = shared.date.mdFormat == 0 ? @"MM-DD" : @"DD-MM";
+        cell.detailTextLabel.text = shared.date.mdFormat == 0 ? NSLocalizedString(@"MM-DD", nil) : NSLocalizedString(@"DD-MM", nil);
     }
     if (11 == indexPath.row){
         cell.swt.on = shared.disturb.switch_flag;

@@ -51,7 +51,7 @@ class OtaViewController: UIViewController, CXCallObserverDelegate {
         let version = dic["CFBundleVersion"] as! String
         versionLab.textAlignment = .center
         versionLab.textColor = .systemBlue
-        versionLab.text = "Version: " + version
+        versionLab.text = String(format: NSLocalizedString("Version: %@", comment: ""), version)
     }
 
     private func initUI(){
@@ -61,15 +61,15 @@ class OtaViewController: UIViewController, CXCallObserverDelegate {
         view.addSubview(fileView)
         
         fileTitleLab = UILabel()
-        fileTitleLab.text = "File"
+        fileTitleLab.text = NSLocalizedString("File", comment: "")
         fileView.addSubview(fileTitleLab)
         
         fileLabel = UILabel()
-        fileLabel.text = "choose"
+        fileLabel.text = NSLocalizedString("choose", comment: "")
         fileView.addSubview(fileLabel)
         
         upgradeBtn = UIButton()
-        upgradeBtn.setTitle("To upgrade", for: .normal)
+        upgradeBtn.setTitle(NSLocalizedString("To upgrade", comment: ""), for: .normal)
         upgradeBtn.backgroundColor = UIColor.blue
         upgradeBtn.addTarget(self, action: #selector(startUpgrade), for: .touchUpInside)
         view.addSubview(upgradeBtn)
@@ -137,9 +137,9 @@ class OtaViewController: UIViewController, CXCallObserverDelegate {
         
         if fileData == nil { return }
         
-        let alert = UIAlertController(title: nil, message: "Now to upgrade", preferredStyle: .alert)
-        let act1 = UIAlertAction(title: "Cancel", style: .default)
-        let act2 = UIAlertAction(title: "Upgrade", style: .default) { act in
+        let alert = UIAlertController(title: nil, message: NSLocalizedString("Now to upgrade", comment: ""), preferredStyle: .alert)
+        let act1 = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .default)
+        let act2 = UIAlertAction(title: NSLocalizedString("Upgrade", comment: ""), style: .default) { act in
             let cmd = CE_RequestOTAStatusCmd()
             CEProductK6.shareInstance().sendCmd(toDevice: cmd, complete: nil)
         }

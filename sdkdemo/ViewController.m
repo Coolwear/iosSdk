@@ -52,7 +52,7 @@
     
     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44)];
     btn.layer.cornerRadius = 8;
-    [btn setTitle:@"Start Scan" forState:UIControlStateNormal];
+    [btn setTitle:NSLocalizedString(@"Start Scan", nil) forState:UIControlStateNormal];
     [btn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
     btn.backgroundColor = UIColor.blueColor;
     [btn addTarget:self action:@selector(scan:) forControlEvents:UIControlEventTouchUpInside];

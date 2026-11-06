@@ -26,7 +26,7 @@
     [self.view addSubview:self.testLab];
     
     self.testBtn = [UIButton new];
-    [self.testBtn setTitle:@"Start Test" forState:UIControlStateNormal];
+    [self.testBtn setTitle:NSLocalizedString(@"Start Test", nil) forState:UIControlStateNormal];
     self.testBtn.backgroundColor = UIColor.orangeColor;
     [self.testBtn addTarget:self action:@selector(testAction:) forControlEvents:UIControlEventTouchUpInside];
     self.testBtn.frame = CGRectMake(0, CGRectGetMaxY(self.testLab.frame), 100, 44);

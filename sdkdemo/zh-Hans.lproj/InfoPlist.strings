@@ -1,0 +1,2 @@
+/* Bluetooth permission prompt. */
+"NSBluetoothAlwaysUsageDescription" = "需要使用蓝牙来搜索并连接您的穿戴设备。";

@@ -1,0 +1,2 @@
+/* Bluetooth permission prompt. */
+"NSBluetoothAlwaysUsageDescription" = "Bluetooth access is used to discover and connect to your wearable device.";
